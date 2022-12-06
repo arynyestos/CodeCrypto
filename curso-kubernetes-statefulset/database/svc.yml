@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata: 
+  name: pg
+spec:
+  selector: 
+    statefulset.kubernetes.io/pod-name: pg-0
+  type:  NodePort
+  ports: 
+  - protocol: TCP
+    port: 5432
+    targetPort: 5432
+    

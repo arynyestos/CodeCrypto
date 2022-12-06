@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "moment": "^2.29.4"
+  },
+  "name": "curso-js-001",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT"
+}

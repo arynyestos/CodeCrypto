@@ -1,0 +1,65 @@
+get http://localhost:3344/hola1
+
+###
+post http://localhost:3344/addUser
+
+###
+post http://localhost:3344/echoPost
+Content-Type: application/x-www-form-urlencoded
+
+
+campo1=v1&fecha=12-4-2014
+
+###
+post http://localhost:3344/echoPostExtended
+Content-Type: application/x-www-form-urlencoded
+
+
+a=1&a=2&a=3&person[name]=jose&person[age]=45
+
+###
+post http://localhost:3344/echoPost
+Content-Type: application/x-www-form-urlencoded
+
+
+a=1&a=2&a=3&person[name]=jose&person[age]=45
+
+###
+post http://localhost:3344/echoPost?a=1&a=2&b=3
+Content-Type: application/x-www-form-urlencoded
+
+
+a=1&a=2&a=3&person[name]=jose&person[age]=45
+
+###
+post http://localhost:3344/echoPostJson
+Content-Type: application/json
+
+{"campo1":"valor1"}
+
+###
+post http://localhost:3344/echoParamsPost/cliente7/facturas/factura23?c=45&a=2&b=2&c=3
+Content-Type: application/x-www-form-urlencoded
+
+a=1&a=2&a=3&person[name]=jose&person[age]=45
+
+###
+get http://localhost:3344/echoParamsGet/cliente7/facturas/factura23?c=45&a=2&b=2&c=3
+
+###
+get http://localhost:3344
+
+###
+get http://localhost:3344/index copy.html
+
+###
+get http://localhost:3344/docs/index copy.html
+
+###
+post http://localhost:3344/minio/createBucket
+Content-Type: application/json
+
+{"nombre":"curso"}
+
+###
+delete http://localhost:3344/minio/curso/PONERAQUÍNOMBREFICHERO

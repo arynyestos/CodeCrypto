@@ -1,0 +1,24 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata: 
+  name: redirector2
+  
+spec:
+  rules: 
+  - host: "web.com"
+    http: 
+      paths:
+        - pathType: Prefix
+          path: "/inicio"
+          backend:
+            service:
+              name: eco
+              port: 
+                number: 8081
+        - pathType: Prefix
+          path: "/contacto"
+          backend:
+            service:
+              name: eco2
+              port: 
+                number: 8081

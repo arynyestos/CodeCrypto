@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata: 
+  name: pg
+spec:
+  selector:
+    matchLabels:
+      app: pg
+  template: 
+    metadata: 
+      labels:
+        app: pg
+    spec: 
+      containers:
+      - name: pg
+        image: postgres:13
+        env:
+        - name: POSTGRES_PASSWORD # Nombre definido en la documentación de postgres
+          value: "123345"
+        volumeMounts: 
+        - name: datos-pg
+          mountPath: /var/lib/postgresql/data
+      volumes:
+      - name: datos-pg
+        persistentVolumeClaim: 
+          claimName: disco-pg
+    
