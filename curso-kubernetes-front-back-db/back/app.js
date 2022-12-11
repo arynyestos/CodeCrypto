@@ -11,15 +11,15 @@ const paramsConexión = {
     password:"123345",
     // host: "localhost",
     // port: 5431,
-    // host: process.env.DB_HOST,
-    // port: process.env.DB_PORT,
-    host: "pg",
-    port: 5432,
+    host: process.env.DB_HOST,
+    port: process.env.DB_PORT,
+    // host: "pg",
+    // port: 5432,
 }
 
 const conexiones = new Pool(paramsConexión)
 
-ap.listen(3000)
+ap.listen(3001)
 
 ap.get("/customers", async (req,res) => {
     const responseDB = await conexiones.query("select * from customers limit 10 ", [])
