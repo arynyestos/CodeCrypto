@@ -5,6 +5,10 @@ const cors = require('cors')
 const servidor = ex()
 servidor.use(cors())
 
+servidor.get("/", (req, res) => {
+    res.send({"Ve a productos":"Nada que ver aquí"})
+})
+
 servidor.get("/ping", (req, res) => {
     res.send({"pong": new Date()})
 })
