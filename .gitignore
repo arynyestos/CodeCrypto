@@ -1,4 +1,3 @@
-curso-proyecto-faucet-server/.env
-*node_modules
+node_modules/
 curso-proyecto-gethopia
 *.env
