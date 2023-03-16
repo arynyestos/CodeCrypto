@@ -1,12 +1,13 @@
 const ex = require('express')
 const Web3 = require('Web3')
 const cors = require('cors')
+require('dotenv').config()
 
 const servidor = ex()
 
 servidor.use(cors())
 
-const URL_INFURA = "https://mainnet.infura.io/v3/20b55e65c65649c686d7abc8e4853f0b"
+const URL_INFURA = process.env.URL_INFURA
 
 const web3 = new Web3(URL_INFURA)
 
