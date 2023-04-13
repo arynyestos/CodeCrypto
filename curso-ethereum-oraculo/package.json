@@ -1,0 +1,15 @@
+{
+  "name": "curso-ethereum-oraculo",
+  "type": "module",
+  "version": "1.0.0",
+  "main": "oraculo.js",
+  "license": "MIT",
+  "dependencies": {
+    "@ethereumjs/common": "^3.1.1",
+    "@ethereumjs/tx": "^4.1.1",
+    "fs": "^0.0.1-security",
+    "node-fetch": "^3.3.1",
+    "truffle": "^5.8.1",
+    "web3": "^1.9.0"
+  }
+}

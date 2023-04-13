@@ -1,0 +1,38 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: example-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  - http:
+      paths:
+      - pathType: Prefix
+        path: "/web"
+        backend:
+          service:
+            name: svc-web-server
+            port:
+              number: 80
+      - pathType: Prefix
+        path: "/mi-servidor"
+        backend:
+          service:
+            name: mi-servidor
+            port:
+              number: 3333
+      - pathType: Prefix
+        path: "/foo"
+        backend:
+          service:
+            name: foo-service
+            port:
+              number: 5678
+      - pathType: Prefix
+        path: "/bar"
+        backend:
+          service:
+            name: bar-service
+            port:
+              number: 5678
