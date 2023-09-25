@@ -1,3 +1,6 @@
 node_modules/
 curso-proyecto-gethopia/
 *.env
+curso-hyperledger-docker/node-minio-postgres/
+curso-hyperledger-fabric/fabric-deploy/
+curso-hyperledger-fabric/fabric-ejercicio/
